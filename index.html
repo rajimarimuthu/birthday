@@ -5,14 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Dancing+Script:wght@700&family=Lobster+Two:ital,wght@1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@900&family=Quicksand:wght@700&display=swap" rel="stylesheet">
+      
 <style>
     body{
         /* background-image: url('new.gif'); */
-        background-image: url('star-sparkle.gif');
+        background-image: url('images/star-sparkle.gif');
         color:white;
     }
     h1{
@@ -27,14 +32,16 @@
         font-size: 40px;
         text-align: center;
     }
+    
     .ballon img{
         width: 100%;
+        margin-top: 150px;
     }
     .container{
         margin-top:50px
     }
     .row{
-        margin-top:50px
+        /* margin-top:50px */
     }
     .caption{
         color:white
@@ -78,63 +85,161 @@
     }
 } */
 
-.box{
+.cake {
   position: absolute;
-  top:calc(50% - 45px);
-    left:calc(50% - 100px);
-  transform: perspective(1000px) rotate(-90deg);
-  width: 200px;
-  height: 300px;
-  transform-style:preserve-3d;
-  background: black;
-  border: 3px solid back;
-    border-radius: 18px;
+  width: 250px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  margin-top: -70px;
+  margin-left: -125px;
 }
-.box div {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    animation: animate 10s linear infinite;
-    border-radius: 18px;
+
+.plate {
+  width: 270px;
+  height: 110px;
+  position: absolute;
+  bottom: -10px;
+  left: -10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  box-shadow: 0 2px 0 #b3b3b3, 0 4px 0 #b3b3b3, 0 5px 40px rgba(0, 0, 0, 0.5);
 }
-.box div harry
-{
-  position:absolute;
-  top: 0;
-  left:0;
+
+.cake > * {
+  position: absolute;
+}
+
+.layer {
+  position: absolute;
   display: block;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(0deg, #f1f1f1, #bbb, #f1f1f1);
-  border: 3px solid black;
-  border-radius: 18px;
+  width: 250px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #553c13;
+  box-shadow: 0 2px 0px #6a4b18, 0 4px 0px #33240b, 0 6px 0px #32230b, 0 8px 0px #31230b, 0 10px 0px #30220b, 0 12px 0px #2f220b, 0 14px 0px #2f210a, 0 16px 0px #2e200a, 0 18px 0px #2d200a, 0 20px 0px #2c1f0a, 0 22px 0px #2b1f0a, 0 24px 0px #2a1e09, 0 26px 0px #2a1d09, 0 28px 0px #291d09, 0 30px 0px #281c09;
 }
-.box div harry:nth-child(1)
-{
-  transform: rotateX(0deg);
+
+.layer-top {
+  top: 0px;
 }
-.box div harry:nth-child(2)
-{
-  transform: rotateX(45deg);
+
+.layer-middle {
+  top: 33px;
 }
-.box div harry:nth-child(3)
-{
-  transform: rotateX(-45deg)
+
+.layer-bottom {
+  top: 66px;
 }
-.box div harry:nth-child(4)
-{
-  transform: rotateX(90deg);
+
+.icing {
+  top: 2px;
+  left: 5px;
+  background-color: #f0e4d0;
+  width: 240px;
+  height: 90px;
+  border-radius: 50%;
 }
-@keyframes animate
-{
-  0%{
-    transform:perspective(1000px) rotateX(0deg);
+.icing:before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  right: 5px;
+  bottom: 6px;
+  left: 5px;
+  background-color: #f4ebdc;
+  box-shadow: 0 0 4px #f6efe3, 0 0 4px #f6efe3, 0 0 4px #f6efe3;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.drip {
+  display: block;
+  width: 50px;
+  height: 60px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  background-color: #f0e4d0;
+}
+
+.drip1 {
+  top: 53px;
+  left: 5px;
+  transform: skewY(15deg);
+  height: 48px;
+  width: 40px;
+}
+
+.drip2 {
+  top: 69px;
+  left: 181px;
+  transform: skewY(-15deg);
+}
+
+.drip3 {
+  top: 54px;
+  left: 90px;
+  width: 80px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+.candle {
+  background-color: #7B020B;
+  width: 16px;
+  height: 50px;
+  border-radius: 8px/4px;
+  top: -20px;
+  left: 50%;
+  margin-left: -8px;
+  z-index: 10;
+}
+.candle:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ad030f;
+}
+
+.flame {
+  position: absolute;
+  background-color: orange;
+  width: 15px;
+  height: 35px;
+  border-radius: 10px 10px 10px 10px/25px 25px 10px 10px;
+  top: -34px;
+  left: 50%;
+  margin-left: -7.5px;
+  z-index: 10;
+  box-shadow: 0 0 10px rgba(255, 165, 0, 0.5), 0 0 20px rgba(255, 165, 0, 0.5), 0 0 60px rgba(255, 165, 0, 0.5), 0 0 80px rgba(255, 165, 0, 0.5);
+  transform-origin: 50% 90%;
+  animation: flicker 1s ease-in-out alternate infinite;
+}
+
+@keyframes flicker {
+  0% {
+    transform: skewX(5deg);
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.2), 0 0 20px rgba(255, 165, 0, 0.2), 0 0 60px rgba(255, 165, 0, 0.2), 0 0 80px rgba(255, 165, 0, 0.2);
   }
-  100%{
-    transform:perspective(1000px) rotateX(360deg);
+  25% {
+    transform: skewX(-5deg);
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.5), 0 0 20px rgba(255, 165, 0, 0.5), 0 0 60px rgba(255, 165, 0, 0.5), 0 0 80px rgba(255, 165, 0, 0.5);
+  }
+  50% {
+    transform: skewX(10deg);
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.3), 0 0 60px rgba(255, 165, 0, 0.3), 0 0 80px rgba(255, 165, 0, 0.3);
+  }
+  75% {
+    transform: skewX(-10deg);
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.4), 0 0 20px rgba(255, 165, 0, 0.4), 0 0 60px rgba(255, 165, 0, 0.4), 0 0 80px rgba(255, 165, 0, 0.4);
+  }
+  100% {
+    transform: skewX(5deg);
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.5), 0 0 20px rgba(255, 165, 0, 0.5), 0 0 60px rgba(255, 165, 0, 0.5), 0 0 80px rgba(255, 165, 0, 0.5);
   }
 }
 .hello{
@@ -143,65 +248,129 @@
    border-radius: 12px;
    background: black;
 }
+.new{
+  font-family: 'Cookie', cursive;
+  font-size:50px;
+  padding:30px;
+  text-align:center ;
+    ;
+  text-shadow: 2px 2px 2px rgb(10, 136, 145);
+
+}
+p{
+	margin: auto;
+	font-family: "Alegreya Sans SC", sans-serif;
+	text-align: center;
+	font-size: 100px;
+	color: #fff;
+	opacity: 0.8;
+	line-height: 0.8em;
+  letter-spacing: 2px;
+}
+.word {
+	display: block !important;
+}
+
+.char {
+	opacity: 0;
+}
+
+
 </style>
 
 </style>
 </head>
 <body>
-  <audio loop autoplay>
-    <source src="Melody Music In Tamil-Bgm.mp3" type="audio/mp3">
-</audio>
+
  
     <div class="container">
-    <h1>Welcome to Ballon Shop</h1>
+    <p class="split">HAPPY BIRTHDAY SIR</p>
   
   
   
     <div class="row">
         <div class="col-lg-3 ballon">
-            <img src="balloon-36.gif" alt=""  >
+            <img src="images/balloon-36.gif" alt=""  >
         </div>
         <div class="col-lg-6 text">
-            <center>
-            <img style="width:60%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGBEQgxCAaXUsUFdZ_8VpIOWYhJLhIqxc7tC7ghwk_mte_E3ikl2P-JDh0sJJ_VO401lA&usqp=CAU" alt="">
-        </center> <!-- <svg viewBox="0 0 500 500">
-                <path id="curve" fill="transparent"  d="M73.2,148.6c4-6.1,65.5-96.8,178.6-95.6c111.3,1.2,170.8,90.3,175.1,97" />
-                <text width="500"  class="caption">
-                  <textPath xlink:href="#curve" >
-                   best Shop in coimbatore
-                  </textPath>
-                </text>
-              </svg> -->
+          <div class="cake">
+            <div class="plate"></div>
+            <div class="layer layer-bottom"></div>
+            <div class="layer layer-middle"></div>
+            <div class="layer layer-top"></div>
+            <div class="icing"></div>
+            <div class="drip drip1"></div>
+            <div class="drip drip2"></div>
+            <div class="drip drip3"></div>
+            <div class="candle">
+                <div class="flame"></div>
+            </div>
+        </div>
              
             
         </div>
         <div class="col-lg-3 ballon">
-            <img src="balloon-36.gif" alt="">
+            <img src="images/balloon-36.gif" alt="">
         </div>
     
 
-        <div class="col-lg-8">
-            <p>I've accepted that we've all got crap to deal with and problems that we're fighting not to be defined by. At the end of the day, we all want the same stuff: fulfillment, love, support, comfort, and a hot-air balloon with laser guns attached to it. The most important thing is that we appreciate the crazy ride we're on.
-                Read more at https://www.brainyquote.com/topics/balloon-quotes
-                    </p>
+        <div class="col-lg-12"  style="text-align: center;">
+            <span class="new">“Be happy! Today is the day you were brought into this world to be a blessing and inspiration to the people around you! You are a wonderful person! May you be given more birthdays to fulfill all of your dreams!”
+            </span>
         </div>
-        <div class="col-lg-1">
+        <!-- <div class="col-lg-2 ballon" >
+          <img src="balloon-36.gif" alt=""  >
+        </div> <div class="col-lg-2 ballon" >
+          <img src="balloon-36.gif" alt=""  >
+        </div> -->
+        <div class="col-lg-6">
+          <br><br>
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="images/2.jpeg" alt="First slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="images/1.jpeg" alt="Second slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="images/3.jpeg" alt="Third slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="images/4.jpeg" alt="Third slide">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <br><br>
+         <img src="images/pngaaa.com-235491.png" alt="" style="width:100%"><br>
+         <img src="images/pngaaa.com-235491.png" alt="" style="width:100%">
+        </div>
+        <!-- <div class="col-lg-6">
+<h1>Balloon shop</h1>
+        </div> -->
+        <!-- <div class="col-lg-2  ballon" >
+          <img src="balloon-36.gif" alt=""  >
+       
+        </div>
+        <div class="col-lg-2 ballon" >
+          <img src="balloon-36.gif" alt=""  >
+        </div> -->
+        <div class="col-lg-12" style="text-align: center;">
+          <br><br>
+          <span class="new" style="text-align: center;">Once Again Happy Birthday!.....Ragu Sir..
+            I hope all your birthday wishes and dreams come true</span>
+        <img src="images/pngwing.com (1).png" alt="" style="width:20%">
 
-        </div>
-        <div class="col-lg-3">
-            <center>
-                <div class="box">
-                    <div>
-                      <harry>
-                        <img class="hello" src="http://wallup.net/wp-content/uploads/2015/12/88107-mountain-abstract-poly.jpg">
-                      </harry>
-                      <harry><img class="hello" src="https://w0.peakpx.com/wallpaper/260/122/HD-wallpaper-shirayukihime-scenery-romance-manga-shirayukihime-anime-love-flowers-scenery-couple-night.jpg"></harry>
-                      <harry><img class="hello" src="https://free4kwallpapers.com/uploads/originals/2019/06/02/future-city-sunset-wallpaper.jpg"></harry>
-                      <harry><img class="hello" src="https://free4kwallpapers.com/uploads/originals/2020/03/20/neon-shallows-wallpaper.jpg"></harry>
-                      <harry><img class="hello" src="https://free4kwallpapers.com/uploads/originals/2020/02/19/creak-of-the-roof-by-pavel-vophira-wallpaper.jpg"></harry>
-                    </div>
-                  </div>
-            </center>
         </div>
     </div>
 </div>
@@ -210,5 +379,56 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>   
-</body>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+  <script src='https://unpkg.co/gsap@3/dist/gsap.min.js'></script>
+  <script src='https://assets.codepen.io/16327/SplitText3.min.js'></script>
+        <script id="rendered-js" >
+  jQuery(document).ready(function ($) {
+    var split = new SplitText(".split", {
+      type: "chars,words",
+      charsClass: "char",
+      wordsClass: "word word++" });
+  
+  
+    var letter = $(".char");
+  
+    gsap.set(letter, {
+      y: 5,
+      opacity: 0,
+      textShadow: "-5px -5px #00acc1, -10px -10px #064273" });
+  
+  
+    gsap.to(letter, {
+      opacity: 1,
+      stagger: 0.2 });
+  
+  
+    gsap.to(letter, {
+      y: -5,
+      duration: 0.5,
+      stagger: {
+        each: 0.2,
+        ease: "sine.inOut",
+        repeat: -1,
+        yoyo: true } });
+  
+  
+  
+    gsap.to(letter, {
+      duration: 4,
+      textShadow: "5px 5px #00acc1, 10px 10px #064273",
+      stagger: {
+        each: 0.8,
+        ease: "linear",
+        repeat: -1,
+        yoyo: true } });
+  
+  
+  }); // end doc ready
+  //# sourceURL=pen.js
+      </script>
+  
+  </body>
 </html>
